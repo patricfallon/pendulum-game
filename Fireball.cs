@@ -35,6 +35,8 @@ public class Fireball : MonoBehaviour {
 
 		fireballAudio.PlayOneShot (hitBlast, 0.5f);
 
+//This doesn't work correctly. The object collides with the player, but isn't always destroyed. 
+//I wonder if it's conflicting with the initial "DestroyObject" in the Start function.
 		if (other.tag == "Player"){
 
 			DestroyObject (this.gameObject);
